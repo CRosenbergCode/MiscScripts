@@ -20,7 +20,7 @@ do
   #The below line is the option for DNA
   #grep -A1 "${line}\s" $bed | grep "ID=gene" > $line.bed
   #Below is the option for mRNA
-  grep -A1 "${line}\s" $bed | grep "ID=mRNA" > $line.bed
+  grep "${line}\s" $bed | grep "ID=mRNA" > $line.bed
   bedtools getfasta -fi $genome -bed $line.bed -fo $line.fa
   rm $line.bed
 #These remove the temporary files used by the program.

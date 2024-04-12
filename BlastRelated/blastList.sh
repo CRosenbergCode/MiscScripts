@@ -13,7 +13,7 @@ genome="Culex-tarsalis_knwr_CONTIGS_CtarK1.fa" #Fasta file containing the genome
 while IFS= read -r line
 do
   echo $line
-  grep -A1 "${line}\s" $bed | grep "ID=gene" > $line.bed
+  grep "${line}\s" $bed | grep "ID=gene" > $line.bed
   bedtools getfasta -fi $genome -bed $line.bed -fo $line.fa
   echo $line >> $output
   tblastx -query $line.fa -db CTarsalis -evalue 1e-50 | grep "Query=" -A 7 >> $output
