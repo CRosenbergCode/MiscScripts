@@ -6,6 +6,8 @@
 
 
 input="Genes.txt" #File with list of gene names in starting organism (Aedes Ae, Culex Q, etc) with one gene name on each line. These must be the names used in the bed file.
+#This is gene1234 for Culex
+#MAKE SURE THIS LIST DOES NOT HAVE WINDOWS STYLE LINE ENDINGS, USE A MAC/LINUX MACHINE TO MAKE IT OR A PROGRAM LIKE ATOM
 output="Blast.txt" #Name of the file in which the blast output will be stored
 bed="CulexT.bed" #File with a list of gene names and locations on the genome in the starting organism
 genome="Culex-tarsalis_knwr_CONTIGS_CtarK1.fa" #Fasta file containing the genome, NOT TRANSCRIPTOME, of the starting organism
